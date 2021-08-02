@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.linspace(-100, 100)
+y = np.linspace(-100, 100)
+
+x, y = np.meshgrid(x, y)
+
+plt.axhline(0, alpha=.1,)
+plt.axvline(0, alpha=.1,)
+
+a = 60
+b = 35
+
+plt.contour(x, y, (y ** 2 / a ** 2 - x ** 2 / b ** 2), [1])
+
+plt.title("Hyperbola_Equation is")
+plt.show()
